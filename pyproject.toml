@@ -1,0 +1,28 @@
+[project]
+name = "neo4j-social-network"
+version = "0.1.0"
+description = "Pet project."
+authors = [
+    {name = "Your Name",email = "you@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "neomodel (>=5.5.3,<6.0.0)",
+    "fastapi (>=0.121.1,<0.122.0)",
+    "uvicorn (>=0.38.0,<0.39.0)",
+    "python-dotenv (>=1.2.1,<2.0.0)"
+]
+
+[tool.poetry]
+packages = [
+    { include = "app" }
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "bin.start:main"
+mock = "bin.mock_data:main"
