@@ -1,0 +1,6 @@
+poetry.lock
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+neo4j/
